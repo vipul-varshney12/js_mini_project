@@ -199,3 +199,47 @@ io.on('connection', (socket) => {
 server.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+
+/*
+const express = require('express');
+const http = require('http');
+const socketIo = require('socket.io');
+const bodyParser = require('body-parser');
+
+const app = express();
+const server = http.createServer(app);
+const io = socketIo(server);
+const PORT = 3000;
+
+// Middleware
+app.use(bodyParser.json());
+app.use(express.static('public')); // Serve static files from the 'public' directory
+
+// Socket.IO connection
+io.on('connection', (socket) => {
+    console.log('New user connected');
+    
+    // Listen for messages sent by users
+    socket.on('chat message', (msg) => {
+        console.log('Message received: ' + msg); // Log the received message
+        io.emit('chat message', msg); // Broadcast the message to all connected users
+    });
+
+    // Handle user disconnect
+    socket.on('disconnect', () => {
+        console.log('User disconnected');
+    });
+});
+
+// Serve the chat interface
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/public/index.html');
+});
+
+// Start server
+server.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
+
+*/
