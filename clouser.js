@@ -10,7 +10,7 @@ clouserfunc();
 */
 
 // lexical scope
-/*function outer(){
+function outer(){
     let username="hitesh"
     function inner(){
         console.log(username);
@@ -22,13 +22,13 @@ clouserfunc();
     innertwo()
 }
 outer()
-console.log(username);
-*/
+//console.log(username);
+
 // parent fdunction ka  scope child le sakte hai par child ka  scope xhild nhi le  sakta
 
 
 // clousers
- function makeFUnc(){
+ /*function makeFUnc(){
     const name="Mozila"
     function dispalyNmae(){
         console.log(name);
@@ -37,3 +37,4 @@ console.log(username);
  }
  const func=makeFUnc();
  func();
+ */

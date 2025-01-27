@@ -58,7 +58,7 @@
      */
 
      // promises in js
-     function fetchData() {
+    /*function fetchData() {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 const data = "some data";
@@ -73,5 +73,31 @@
         })
         .catch(function(error) {
             console.log(error);
-        });
-    
+        });*/
+    // hi how are you
+    // This is the callback function
+function greeting(name) {
+  return `Hello, ${name}!`;
+}
+
+// This is the higher-order function that takes a callback
+function processUserInput(callback) {
+  const name = 'Alice'; // Simulating user input
+  const message = callback(name); // Call the callback function with the user input
+  console.log(message); // Log the returned message
+}
+
+// Using the processUserInput function with the greeting callback
+processUserInput(greeting);
+
+// call back functions
+function greet(name, callback) {
+  console.log(`Hello, ${name}!`);
+  callback();
+}
+
+function sayGoodbye() {
+  console.log("Goodbye!");
+}
+
+greet("GFG", sayGoodbye);
